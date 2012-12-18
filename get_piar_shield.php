@@ -34,7 +34,6 @@ $f_AdminButtons
 <td>Активность объекта: $f_Active</td>
 </tr>
 </table>
-
 <br>
 <form method='get' action=''>
 Свободные: <input checked type='checkbox'  name='free' value='free' />
