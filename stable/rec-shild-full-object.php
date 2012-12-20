@@ -38,14 +38,14 @@ echo "
     </script>
 <!--Делаем заказ на детальном отображении реклам. установки-->
 <form method='post' action='/shop/fast-order/'>
-<input type='hidden' value='".$f_RowID."' name='Orders_Arr[]' />
-<input type='hidden' value='1' id=hidden_".$f_RowID." name='counts[]' />
-<input size=2 type='text' name='dateStartDay_Arr[]' />-<input size=2 type='text' name='dateStartMonth_Arr[]' />-<input size=3 type='text' name='dateStartYear_Arr[]' /> Дата начала показа
+<input type='hidden' value='".$f_RowID."' name='Orders_Arr[1]' />
+<input type='hidden' value='1' id=hidden_".$f_RowID." name='counts[1]' />
+<input size=2 type='text' name='dateStartDay_Arr[1]' />-<input size=2 type='text' name='dateStartMonth_Arr[1]' />-<input size=3 type='text' name='dateStartYear_Arr[1]' /> Дата начала показа
 <br>
-<div><input type='checkbox' id='oneMonth' onclick='check()' name='oneMonth_Arr[]' value='oneMonth_Arr[]' /> - Заказать на месяц</div>
+<div><input type='checkbox' id='oneMonth' onclick='check()' name='oneMonth_Arr[1]' value='oneMonth_Arr[1]' /> - Заказать на месяц</div>
 <div id='dateEnd'>
 <br>
-<input size=2 type='text' name='dateEndMonth_Arr[]' />-<input size=3 type='text' name='dateEndYear_Arr[]' /> Дата окончания показа (мес., год.)
+<input size=2 type='text' name='dateEndMonth_Arr[1]' />-<input size=3 type='text' name='dateEndYear_Arr[1]' /> Дата окончания показа (мес., год.)
 </div>
 <br>
 <div><input type='submit' name='sub_Arr' value='купить' /></div>
