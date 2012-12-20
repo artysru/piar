@@ -37,22 +37,18 @@ echo "
         }
     </script>
 <!--Делаем заказ на детальном отображении реклам. установки-->
-<form method='post' action='/shop/insert-product/'>
-<input type='hidden' value='".$current_user['User_ID']."' name='User_ID' />
-<input type='hidden' value='".$current_sub['Subdivision_ID']."' name='Subdivision_ID' />
-<input type='hidden' value='".$current_cc['Sub_Class_ID']."' name='Sub_Class_ID' />
-<input type='hidden' value='".$f_Parrent."' name='Parrent' />
-<input type='hidden' value='".$f_Article."' name='Object' />
-<input type='hidden' id='inputPrice' value='".$f_Price."' name='Price' />
-<input size=2 type='text' name='dateStartDay' />-<input size=2 type='text' name='dateStartMonth' />-<input size=3 type='text' name='dateStartYear' /> Дата начала показа
+<form method='post' action='/shop/fast-order/'>
+<input type='hidden' value='".$f_RowID."' name='Orders_Arr[]' />
+<input type='hidden' value='1' id=hidden_".$f_RowID." name='counts[]' />
+<input size=2 type='text' name='dateStartDay_Arr[]' />-<input size=2 type='text' name='dateStartMonth_Arr[]' />-<input size=3 type='text' name='dateStartYear_Arr[]' /> Дата начала показа
 <br>
-<div><input type='checkbox' id='oneMonth' onclick='check()' name='oneMonth' value='oneMonth' /> - Заказать на месяц</div>
+<div><input type='checkbox' id='oneMonth' onclick='check()' name='oneMonth_Arr[]' value='oneMonth_Arr[]' /> - Заказать на месяц</div>
 <div id='dateEnd'>
 <br>
-<input size=2 type='text' name='dateEndMonth' />-<input size=3 type='text' name='dateEndYear' /> Дата окончания показа (мес., год.)
+<input size=2 type='text' name='dateEndMonth_Arr[]' />-<input size=3 type='text' name='dateEndYear_Arr[]' /> Дата окончания показа (мес., год.)
 </div>
 <br>
-<div><input type='submit' value='купить' /></div>
+<div><input type='submit' name='sub_Arr' value='купить' /></div>
 </form>
 <script type='text/javascript'>
 function check(){
